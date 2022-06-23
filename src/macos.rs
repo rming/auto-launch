@@ -106,7 +106,7 @@ impl AutoLaunch {
         } else {
             let props = format!(
                 "{{name:\"{}\",path:\"{}\",hidden:{}}}",
-                self.app_name, self.app_path, self.hidden
+                self.app_name, self.app_path, true
             );
             let command = format!("make login item at end with properties {}", props);
             let output = exec_apple_script(&command)?;
